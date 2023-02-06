@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   ###Place
   get "/places/:id" => "places#index"
+  post "/places" => "places#create"
 end

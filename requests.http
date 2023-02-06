@@ -37,3 +37,13 @@ Content-Type: application/json
 ###Place
 ###index
 GET http://localhost:3000/places/4
+
+###create
+POST http://localhost:3000/places
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzU3OTk5OTV9.vHWcMbD7Z3EY-nqEM3gT2gDqwf0IaKURIwZVBflNVlk
+Content-Type: application/json
+
+{
+  "name": "home",
+  "address": "2760 s highland ave"
+}
