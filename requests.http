@@ -1,0 +1,35 @@
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "ann",
+  "email": "ann@email.com",
+  "password": "password",
+  "password_confirmation": "password",
+  "image_url": "https://img.freepik.com/free-vector/cute-blue-tyrannosaurus-rex_138676-2073.jpg?w=2000&t=st=1675707916~exp=1675708516~hmac=0e90d7f39b6854f1874135911941a047e766d83985aa27682405e211cb3a74ef"
+}
+
+### Session
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "ben@email.com",
+  "password": "password"
+}
+
+###Trip
+#INDEX
+GET http://localhost:3000/trips
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzU3OTk5OTV9.vHWcMbD7Z3EY-nqEM3gT2gDqwf0IaKURIwZVBflNVlk
+
+###Create
+POST http://localhost:3000/trips
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzU3OTk5OTV9.vHWcMbD7Z3EY-nqEM3gT2gDqwf0IaKURIwZVBflNVlk
+Content-Type: application/json
+
+{
+  "title": "lombard trip"
+}
