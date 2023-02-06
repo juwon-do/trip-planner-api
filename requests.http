@@ -33,3 +33,7 @@ Content-Type: application/json
 {
   "title": "lombard trip"
 }
+
+###Place
+###index
+GET http://localhost:3000/places/4
