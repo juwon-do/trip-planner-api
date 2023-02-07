@@ -9,7 +9,9 @@ Content-Type: application/json
   "password_confirmation": "password",
   "image_url": "https://img.freepik.com/free-vector/cute-blue-tyrannosaurus-rex_138676-2073.jpg?w=2000&t=st=1675707916~exp=1675708516~hmac=0e90d7f39b6854f1874135911941a047e766d83985aa27682405e211cb3a74ef"
 }
-
+### Users current_user
+GET http://localhost:3000/users/current_user.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzU4ODIyOTd9.8J3DnheJNAQQfyPaJGvm81QyPymvDDytM6eaCWDSORM
 ### Session
 ### Sessions create (login)
 POST http://localhost:3000/sessions.json
