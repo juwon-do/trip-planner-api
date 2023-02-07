@@ -1,7 +1,9 @@
 class TripsController < ApplicationController
   def index
-    trips = Trip.where(user_id: current_user.id)
-    render json: trips.as_json
+    @trips = Trip.where(user_id: current_user.id)
+    @places = Place.where(trip_id: @trips.ids)
+    
+    render :json => @trips, include: [:places]
   end
 
   def create
@@ -13,7 +15,11 @@ class TripsController < ApplicationController
         start_time: params[:start_time],
         end_time: params[:end_time]
       )
-      render json: trip.as_json
+      if trip.save
+        render json: {message: "Successfully created"}
+      else
+        render json: { errors: trip.errors.full_messages }, status: :bad_request
+      end
     else
       render json: {errors: "Need to login"}
     end
