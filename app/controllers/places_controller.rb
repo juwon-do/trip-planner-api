@@ -14,6 +14,10 @@ class PlacesController < ApplicationController
       start_time: params[:start_time],
       end_time: params[:end_time]
     )
-    render json: place.as_json
+    if place.save
+      render json: {message: "Successfully created"}
+    else
+      render json: { errors: place.errors.full_messages }, status: :bad_request
+    end
   end
 end
