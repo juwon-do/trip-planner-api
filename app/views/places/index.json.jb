@@ -1,0 +1,13 @@
+@places.map do |place|
+  {
+    id: place.id,
+    trip_id: place.trip_id,
+    lat: place.lat,
+    lng: place.lng,
+    name: place.name,
+    description: place.description,
+    image_url: place.image_url,
+    start_time: place.start_time,
+    end_time: place.end_time
+  }
+end

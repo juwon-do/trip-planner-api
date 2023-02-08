@@ -1,7 +1,31 @@
 class PlacesController < ApplicationController
   def index
-    places = Trip.find_by(id: params[:id]).places
-    render json: places.as_json
+    # @places = Trip.find_by(id: params[:id]).places
+    
+    # render json: places.as_json
+    @places = Place.all
+    @places.map { |place| 
+      if place.lat.nil? || place.lng.nil?
+        results = Geocoder.search("#{place.address}")
+        place.lat = results.first.coordinates[0];
+        place.lng = results.first.coordinates[1];
+        place.save
+      end
+    }
+    render template: "places/index"
+
+  end
+
+  def show
+
+    @place = Place.find_by(id: params[:id])
+    if @place.lat.nil? || @place.lng.nil?
+      results = Geocoder.search("#{@place.address}")
+      @place.lat = results.first.coordinates[0];
+      @place.lng = results.first.coordinates[1];
+    end
+    render template: "places/show"
+    # render json: place.as_json
   end
 
   def create

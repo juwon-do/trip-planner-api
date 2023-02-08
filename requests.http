@@ -38,7 +38,9 @@ Content-Type: application/json
 
 ###Place
 ###index
-GET http://localhost:3000/places/4
+GET http://localhost:3000/places.json
+###show
+GET http://localhost:3000/places/17.json
 
 ###create
 POST http://localhost:3000/places

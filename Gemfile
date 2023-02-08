@@ -47,3 +47,7 @@ group :development do
 end
 
 gem 'jwt'
+
+gem 'geocoder', '~> 1.3', '>= 1.3.7'
+
+gem 'jb'
