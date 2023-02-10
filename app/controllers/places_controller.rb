@@ -1,9 +1,10 @@
 class PlacesController < ApplicationController
   def index
-    # @places = Trip.find_by(id: params[:id]).places
+    @trips = Trip.where(user_id: current_user.id)
+    @places = Place.where(trip_id: @trips.ids)
     
     # render json: places.as_json
-    @places = Place.all
+    # @places = Place.all
     @places.map { |place| 
       if place.lat.nil? || place.lng.nil?
         results = Geocoder.search("#{place.address}")

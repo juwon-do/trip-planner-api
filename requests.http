@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 ### Users current_user
 GET http://localhost:3000/users/current_user.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzU4ODIyOTd9.8J3DnheJNAQQfyPaJGvm81QyPymvDDytM6eaCWDSORM
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzU5NzI2MjZ9.UvVRwSjw-QlYFIJB4MCLtd4d3w6oisKLFUZOPXsJ3xY
 ### Session
 ### Sessions create (login)
 POST http://localhost:3000/sessions.json
@@ -35,6 +35,10 @@ Content-Type: application/json
 {
   "title": "lombard trip"
 }
+
+###Show
+GET http://localhost:3000/trips/3.json
+
 
 ###Place
 ###index

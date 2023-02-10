@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   ###TRIP
   get "/trips" => "trips#index"
+  get "/trips/:id" => "trips#show"
   post "/trips" => "trips#create"
 
   ###Place

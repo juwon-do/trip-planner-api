@@ -1,5 +1,6 @@
 class TripsController < ApplicationController
   def index
+    
     @trips = Trip.where(user_id: current_user.id)
     @places = Place.where(trip_id: @trips.ids)
     
@@ -23,5 +24,10 @@ class TripsController < ApplicationController
     else
       render json: {errors: "Need to login"}
     end
+  end
+
+  def show
+    @trip = Trip.find_by(id: params[:id])
+    render template: "trips/show"
   end
 end

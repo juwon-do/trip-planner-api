@@ -1,0 +1,6 @@
+{
+  id: @trip.id,
+  created_at: @trip.created_at,
+  updated_at: @trip.updated_at,
+  places: @trip.places
+}
