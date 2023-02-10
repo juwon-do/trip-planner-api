@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   ###Budget
   get "/budgets" => "budgets#index"
   post "/budgets" => "budgets#create"
+  delete "/budgets/:id" => "budgets#destroy"
 end

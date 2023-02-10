@@ -7,9 +7,16 @@ class BudgetsController < ApplicationController
   def create
     budget = Budget.new(
       trip_id: params[:trip_id],
-      budget: params[:budget]
+      budget: params[:budget],
+      name: params[:name]
     )
-    # budget.save
+    budget.save
+    render json: budget.as_json
+  end
+
+  def destroy
+    budget = Budget.find_by(id: params[:id])
+    budget.destroy
     render json: budget.as_json
   end
 end
