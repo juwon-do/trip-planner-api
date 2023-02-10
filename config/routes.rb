@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   get "/places" => "places#index"
   get "/places/:id" => "places#show"
   post "/places" => "places#create"
+
+  ###Budget
+  get "/budgets" => "budgets#index"
+  post "/budgets" => "budgets#create"
 end

@@ -55,3 +55,18 @@ Content-Type: application/json
   "name": "home",
   "address": "2760 s highland ave"
 }
+
+
+###Budget
+###index
+GET http://localhost:3000/budgets.json
+
+###create
+POST http://localhost:3000/budgets.json
+Content-Type: application/json
+
+{
+  "trip_id": 6,
+  "budget": 1000
+
+}
