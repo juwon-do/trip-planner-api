@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Trip planner
 
-Things you may want to cover:
+## Description
+Let people create and sign in to their account and plan their trip.
 
-* Ruby version
+Minimum Viable Product
+* A user can signup and login
+* A user can see all their trips
+* A user can create a trip
+* A user can add places to a trip
+* A user can see all places for a trip
 
-* System dependencies
+Additional features
+* A user can see their trip on a map
+* A user can plan their trip budget
 
-* Configuration
+Showing only logged in user's data
+```bash
+if (localStorage.jwt === undefined)
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+When a user creates a new place trip, show action takes the address in and converts it to lat and long.
